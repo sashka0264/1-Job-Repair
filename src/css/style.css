@@ -1,8 +1,8 @@
 body {
-  font-family: sans-serif;
+  font-family: "Museo Sans Cyrl -700", sans-serif;
 }
 
-.img {
+img {
   max-width: 100%;
 }
 
@@ -19,14 +19,19 @@ body {
 
 @media (max-width: 768px) {
   .container {
-    max-width: 580px;
+    max-width: 750px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 567px) {
+  .container {
+    max-width: 550px;
     width: 95%;
   }
 }
 
 .button {
-  width: 170px;
-  height: 49px;
   border-radius: 10px;
   background-color: #ffd200;
   border: none;
@@ -34,7 +39,7 @@ body {
 }
 
 .navbar {
-  padding: 8px 0;
+  padding: 7px 8px;
 }
 
 .navbar-block {
@@ -75,23 +80,31 @@ body {
 
 .navbar__phone {
   display: inline-block;
-  width: 176px;
-  height: 18px;
   color: #333333;
   font-family: "Museo Sans Cyrl -700";
-  font-size: 20px;
-  font-weight: 400;
-  text-decoration: none;
   margin-top: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
+  .navbar__button {
+    font-size: 15px;
+    padding: 20px 28px;
+  }
+  .navbar__logo {
+    width: 120px;
+  }
+}
+
+@media (max-width: 567px) {
   .navbar__contacts {
     display: none;
   }
   .navbar__button {
     font-size: 12px;
-    padding: 26px 15px;
+    padding: 15px 26px;
   }
   .navbar__logo {
     width: 90px;
