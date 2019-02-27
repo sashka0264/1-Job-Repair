@@ -1,6 +1,24 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Museo Sans Light';
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot");
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Bold';
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot");
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Все шрифты на сайте*/
+/* Все цвета на сайте*/
 body {
-  font-family: sans-serif;
+  font-family: 'Museo Sans Light', sans-serif;
 }
 
 img {
@@ -39,7 +57,7 @@ img {
   padding: 18px 30px;
 }
 
-/* Импорт стилей шапки */
+/* Стили для интерфейса сайта*/
 .navbar {
   padding: 7px 8px;
 }
@@ -85,7 +103,6 @@ img {
   color: #333333;
   margin-top: 10px;
   font-size: 20px;
-  font-weight: 800;
   text-decoration: none;
 }
 
@@ -112,7 +129,7 @@ img {
   }
 }
 
-/* Стили для главного экрана */
+/* Импорт стилей шапки */
 .hero {
   padding: 50px 0;
   background-color: #f5f5f5;
@@ -132,15 +149,14 @@ img {
 
 .hero-text__title {
   font-size: 41px;
-  font-weight: 700;
   line-height: 55px;
   margin-bottom: 37px;
+  font-family: 'Museo Sans Bold', sans-serif;
 }
 
 .hero-text__subtitle {
   display: inline-block;
   font-size: 20px;
-  font-weight: 700;
   margin-bottom: 70px;
   font-size: 20px;
 }
@@ -227,4 +243,6 @@ img {
     margin-right: 15px;
   }
 }
+
+/* Стили для главного экрана */
 /*# sourceMappingURL=style.css.map */
