@@ -18,10 +18,11 @@
     &__title
         max-width: 360px
         line-height: 35px
-        margin-bottom: 24px
+        margin-bottom: 20px
+        margin-top: -16px
     &__subtitle
         max-width: 250px
-        margin-bottom: 30px
+        margin-bottom: 29px
     &__input
         margin-bottom: 30px
         width: 240px
@@ -30,6 +31,17 @@
     &__button
         width: 100%
         min-height: 70px
+        +bold
+    &__phone
+        display: flex
+        justify-content: space-between
+        line-height: 24px
+        font-size: 15px
+        margin-top: 28px
+        &-callback
+            margin-right: 10px
+            &-number
+                +bold
 @media (max-width: 1200px)
     .offer
         background-size: cover
@@ -44,3 +56,31 @@
         &-block 
             width: 100%
             padding-right: 0
+@media (max-width: 567px)
+    .offer
+        &-block
+            padding-right: 15px
+            padding-left: 15px 
+        &__title
+            font-size: 18px
+            line-height: 23px
+            margin-bottom: 17px
+        &__subtitle
+            font-size: 14px
+        &__input
+            font-size: 15px
+            padding-left: 19px
+        &__button
+            font-size: 14px
+            padding: 0 40px
+            line-height: 18px
+        &__phone
+            flex-direction: column
+            margin-left: 6px
+            &-call
+                margin-top: -5px
+            &-callback
+                margin-top: 5px
+
+        
+
