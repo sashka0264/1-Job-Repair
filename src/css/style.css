@@ -88,6 +88,11 @@ img {
   border-radius: 10px;
 }
 
+.scrollup {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
 /* Стили для интерфейса сайта*/
 .navbar {
   padding: 7px 8px;

@@ -15,6 +15,9 @@ button.addEventListener("click", function start(){
     setTimeout(function end(){
         modal.classList.remove("modal_active")}, 5000
     )
+    close.addEventListener("click", function end(){
+        modal.classList.remove("modal_active")
+    })
 })
 
 
