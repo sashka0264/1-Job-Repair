@@ -510,12 +510,15 @@ img {
 
 .price__title {
   margin: auto;
+  font-size: 30px;
+  font-family: 'Museo Sans Bold', sans-serif;
   margin-bottom: 58px;
 }
 
 .price__subtitle {
   text-align: center;
   margin-bottom: 59px;
+  font-size: 20px;
 }
 
 .price__card {
