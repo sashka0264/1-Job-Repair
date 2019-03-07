@@ -183,6 +183,20 @@
         }
 			}})
 		// Скрипт слайдера
+
+		$('#brif-form').validate({
+				rules: {
+					phone: {
+						required: true
+					}
+				},
+				messages: {
+					phone: {
+						required: "Укажите телефон"
+					}
+				}
+		});
+		$(".phone").mask("+7 (999) 999-9999");
 	</script>
 	</section>
 
@@ -308,7 +322,7 @@
 
 					<form action="#">
 						<input type="text" class="input brif__input" placeholder="Ваше имя">
-						<input type="tel" class="input brif__input" placeholder="Ваш телефон">
+						<input type="tel" class="input brif__input phone" placeholder="Ваш телефон">
 						<input type="email" class="input brif__input" placeholder="Ваш email">
 						<button class="button brif__button">Узнать стоимость</button>
 						<span class="form__description">Мы перезвоним Вам в течение 60 секунд</span>
