@@ -15,8 +15,13 @@
 </head>
 
 <body>
-
-
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/up.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
 
 	<nav class="navbar">
 		<div class="container">
@@ -101,14 +106,25 @@
 					Вашего жилья и реализуем его!</h2>
 				<span class="section-subtitle offer__subtitle wow fadeInLeft" data-wow-delay="0.6s">Оставьте заявку на разработку
 					бесплатного дизайн-проекта!</span>
-				<form action="#" class="form offer__form wow fadeInLeft" data-wow-delay="0.6s">
-					<input type="text" class="input offer__input" placeholder="Ваше имя">
-					<input type="tel" class="input offer__input" placeholder="Ваш телефон">
+				<form action="#" id="offer-form" class="form offer__form wow fadeInLeft" data-wow-delay="0.6s">
+					<div class="offerform-error">
+
+						<div class="offerform-error__name">
+						<input type="text" name="username" class="input offer__input" placeholder="Ваше имя">
+						</div>
+
+						<div class="offerform-error__phone">
+						<input type="tel" name="phone" class="input offer__input phone" placeholder="Ваш телефон">
+						</div>
+
+
+					</div>
 					<button class="button offer__button">Получить бесплатный дизайн-проект</button>
 				</form>
 				<div class="offer__phone">
 					<span class="offer__phone-call"> Наш менеджер перезвонит Вам<br>в течение 60 секунд</span>
-					<span class="offer__phone-callback"> или перезвоните нам сами<br><a href="tel:+7(495)42-251-31" class="offer__phone-callback-number">+7
+					<span class="offer__phone-callback"> или перезвоните нам сами<br>
+						<a href="tel:+7(495)42-251-31" class="offer__phone-callback-number">+7
 							(495) 42-251-31</a></span>
 				</div>
 			</div>
@@ -128,18 +144,9 @@
 	</div>
 	<!-- /.modal -->
 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<!-- jquery -->
-	<script src="js/modal.js"></script>
-
-	<script src="js/up.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/wow.min.js"></script>
-
-
 	<section class="section portfolio owl-theme">
 		<div class="container">
-			<h2 class="section-title portfolio__title">Работая с 2007 года, мы сделали более 500 ремонтов в квартирах и домах</h2>
+			<h2 class="section-title portfolio__title">Работая с 2007 года,<br>мы сделали более 500 ремонтов в квартирах и домах</h2>
 			<div class="slider owl-carousel">
 				<div class="slider__item">
 					<img src="img/slider-1.png" class="slider__image" alt="Слайд с примером"></div>
@@ -161,44 +168,7 @@
 			</div>
 		</div>
 	</section>
-	<script>
-		new WOW().init();
-		// Инициализация библиотеки wow 
-		$('.owl-carousel').owlCarousel({
-			loop: true,
-			margin: 10,
-			nav: true ,
-			navText: ["<img class='arrows__left' src='img/left-arrow.png'>",
-				"<img class='arrows__right' src='img/right-arrow.png'>"
-			],
-			responsive:{
-        0:{
-            items:1
-		},
-		768:{
-            items:2
-        },
-        1200:{
-            items:3
-        }
-			}})
-		// Скрипт слайдера
 
-		$('#brif-form').validate({
-				rules: {
-					phone: {
-						required: true
-					}
-				},
-				messages: {
-					phone: {
-						required: "Укажите телефон"
-					}
-				}
-		});
-		$(".phone").mask("+7 (999) 999-9999");
-	</script>
-	</section>
 
 	<section class="section price">
 		<div class="container">
@@ -306,10 +276,10 @@
 
 						<li class="interview-list__item">
 							<span class="interview-list__counter">3</span>
-							<span class="interview-list__text">Где находится помещение, в котором будет производиться ремонт?</span>
+							<span class="interview-list__text interview-list__text-padding">Где находится помещение, в котором будет производиться ремонт?</span>
 						</li>
 
-						<li class="interview-list__item">
+						<li class="interview-list__item interview-list__item-margin">
 							<span class="interview-list__counter">4</span>
 							<span class="interview-list__text">Назначение помещения?</span>
 						</li>
@@ -320,11 +290,13 @@
 					<h3 class="form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h3>
 					<span class="form__subtitle">Для этого заполните форму ниже</span>
 
-					<form action="#">
-						<input type="text" class="input brif__input" placeholder="Ваше имя">
-						<input type="tel" class="input brif__input phone" placeholder="Ваш телефон">
-						<input type="email" class="input brif__input" placeholder="Ваш email">
-						<button class="button brif__button">Узнать стоимость</button>
+					<form action="#" id="brif-form">
+						<div class="brifform-error">
+							<input type="text" name="username" class="input brif__input" placeholder="Ваше имя">
+							<input type="tel" name="phone" class="input brif__input phone" placeholder="Ваш телефон">
+							<input type="email" name="email" class="input brif__input" placeholder="Ваш email">
+						</div>
+						<button class="button brif__button">Рассчитать стоимость</button>
 						<span class="form__description">Мы перезвоним Вам в течение 60 секунд</span>
 					</form>
 
@@ -335,6 +307,127 @@
 		</div>
 	</section>
 
+	<footer class="footer">
+		<div class="map" id="map">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A071d3210e88041a0cd4ebcc347710c2425613715bd9320895d23d6073cc4a29f&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>
+		</div>
+		<div class="container">
+			<div class="contacts-block">
+				<div class="contacts">
+					<h3 class="contacts__title">Приезжайте к нам в гости! Проконсультируем Вас по всем вопросам ремонта</h3>
+					<ul class="contacts-list">
+						<li class="contacts-list__item">
+							<span class="contacts-list__icon"><img src="img/map-placeholder.png" alt="Карта"></span>
+							<span class="contacts-list__text">г. Москва<br>ул. Ленинга, д. 10, корпус 2, оф. 308</span>
+						</li>
+						<li class="contacts-list__item">
+							<span class="contacts-list__icon"><img src="img/clock-with-white-face.png" alt="Часы"></span>
+							<span class="contacts-list__text">Режим работы:<br>с 9:00 до 18:00</span>
+						</li>
+						<li class="contacts-list__item">
+							<span class="contacts-list__icon"><img src="img/phone-call-button.png" alt="Телефон"></span>
+							<span class="contacts-list__text">Телефон:<br><a href="tel:+7(495)42-251-31">+7 (495) 42-251-31</a></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		new WOW().init();
+		// Инициализация библиотеки wow 
+
+		$('#brif-form').validate({
+			rules: {
+				username: {
+					required: true,
+					minlength: 2,
+					maxlength: 15
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				phone: {
+					required: true,
+					phone: true
+				}
+			},
+			messages: {
+				username: {
+					required: "Укажите имя",
+					minlength: jQuery.validator.format("Ни меньше {0} символов"),
+					maxlength: jQuery.validator.format("Не больше 15 символов")
+				},
+				email: "Укажите email",
+				phone: {
+					required: "Укажите телефон",
+				}
+			},
+			errorClass: "invalid",
+			errorElement: "div"
+		});
+
+		$('#offer-form').validate({
+			rules: {
+				username: {
+					required: true,
+					minlength: 2,
+					maxlength: 15
+				},
+				phone: {
+					required: true,
+					phone: true
+				},
+				email: {
+					required: true,
+					email: true
+				}
+			},
+			messages: {
+				username: {
+					required: "Укажите имя",
+					minlength: jQuery.validator.format("Ни меньше {0} символов"),
+					maxlength: jQuery.validator.format("Не больше 15 символов")
+				},
+				phone: {
+					required: "Укажите телефон",
+				},
+				email: {
+					required: "Укажите email",
+					email: "Введите корректный email"
+				}
+			},
+			errorClass: "invalid",
+			errorElement: "div"
+		});
+
+
+		$(".phone").mask("+7 (999) 999-9999");
+
+
+		$('.owl-carousel').owlCarousel({
+			loop: true,
+			margin: 10,
+			nav: true,
+			navText: ["<img class='arrows__left' src='img/left-arrow.png'>",
+				"<img class='arrows__right' src='img/right-arrow.png'>"
+			],
+			responsive: {
+				0: {
+					items: 1
+				},
+				768: {
+					items: 2
+				},
+				1200: {
+					items: 3
+				}
+			}
+		})
+		// Скрипт слайдера
+	</script>
 
 	<a href="#" class="scrollup"><img src="img/up.png" alt="Кнопка-Вверх"></a>
 	<!-- Кнопка вверх -->
