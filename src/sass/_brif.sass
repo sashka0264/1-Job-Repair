@@ -9,38 +9,48 @@
         flex-basis: 50%
     &__form
         flex-basis: 50%
-        padding-left: 200px
+        padding-left: 214px
         text-align: center
     &__input
         width: 100%
         max-width: 370px
         margin-bottom: 15px
+        outline: none
     &__button
         height: 70px
         width: 100%
         max-width: 370px
         margin-top: 15px
         margin-bottom: 30px
-.interview
-    padding-right: 70px 
-    &__title
-        margin-bottom: 50px
-        font-size: 22px
+        font-size: 16px
         +bold
+.interview
+    padding-right: 69px 
+    &__title
+        margin-top: 9px
+        margin-bottom: 48px
+        font-size: 22px
+        line-height: 33px
+        +bold
+        max-width: 516px
     &__subtitle
         font-size: 16px
+        
         display: block
-        margin-bottom: 95px
+        margin-bottom: 91px
     &-list
         list-style: none
         padding: 0
+        line-height: 22px
         &__item
             +bold
             margin-bottom: 25px
             display: flex
             align-items: center
+            &-margin
+                margin-top: 33px
         &__counter
-            margin-right: 30px
+            margin-right: 32px
             width: 35px
             font-size: 14px
             height: 35px
@@ -51,17 +61,23 @@
             line-height: 35px
         &__text
             max-width: 400px
+            font-size: 18px
+            &-padding
+                padding-top: 10px
 .form
     &__title
-        margin-bottom: 50px
+        margin-top: 9px
+        margin-bottom: 46px
         font-size: 22px
         +bold
+        line-height: 33px
     &__subtitle
         font-size: 16px
         display: block
-        margin-bottom: 95px
+        margin-bottom: 50px
     &__description
         display: block
+        font-size: 15px
 @media (max-width: 1200px)
     .brif
         &__form
@@ -91,6 +107,7 @@
         background-position: top center, center bottom
         background-size: 100% 50%, cover
         background-repeat: repeat-x, no-repeat
+        margin-top: 75px
         &-block
             display: flex
             flex-direction: column
