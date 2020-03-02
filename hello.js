@@ -4,3 +4,5 @@ function hello() {
 
 
 lol
+
+написал новое слово
